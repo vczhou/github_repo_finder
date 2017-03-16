@@ -1,4 +1,4 @@
-# Lab 3 - *Github Repo Finder*
+# Lab 3 & 5- *Github Repo Finder*
 
 **Github Repo Finder** is a GitHub Repo search app using the [GitHub API](https://developer.github.com/v3/search/#search-repositories).
 
@@ -23,8 +23,12 @@ Please list two areas of the assignment you'd like to **discuss further with you
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
+### Week 3
 
 <img src='http://i.imgur.com/MQJhQuK.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+### Week 5
+<img src='http://i.imgur.com/Jh8y9A6.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
