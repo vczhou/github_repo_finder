@@ -43,7 +43,6 @@ class RepoResultsViewController: UIViewController, UITableViewDataSource {
 
     // Perform the search.
     fileprivate func doSearch() {
-
         MBProgressHUD.showAdded(to: self.view, animated: true)
 
         // Perform request to GitHub API to get the list of repositories
@@ -78,6 +77,31 @@ class RepoResultsViewController: UIViewController, UITableViewDataSource {
         cell.githubRepo = repos[indexPath.row]
         
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let navController = segue.destination as! UINavigationController
+        let vc = navController.topViewController as! SearchSettingsViewController
+        
+        // Search settings
+        vc.settings = self.searchSettings
+        vc.delegate = self
+    }
+}
+
+
+// Settings Protocol
+extension RepoResultsViewController: SettingsPresentingViewControllerDelegate{
+    func didSaveSettings(settings: GithubRepoSearchSettings) {
+        print("hello i've updated settings")
+        
+        self.searchSettings = settings
+        doSearch()
+        tableView.reloadData()
+    }
+    
+    func didCancelSettings() {
+        
     }
 }
 
